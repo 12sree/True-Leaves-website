@@ -35,8 +35,8 @@ function Footer() {
                 <span>+91 88703098900</span>
               </div>
               <div className="footer-social mt-3">
-                <a href="#" aria-label="Twitter"><i className="fab fa-twitter"></i></a>
-                <a href="#" aria-label="Facebook"><i className="fab fa-facebook-f"></i></a>
+                <button className="footer-social-btn" aria-label="Twitter"><i className="fab fa-twitter"></i></button>
+                <button className="footer-social-btn" aria-label="Facebook"><i className="fab fa-facebook-f"></i></button>
                 <a href="https://www.linkedin.com/company/112359065/admin/page-posts/published/" target="_blank" rel="noreferrer" aria-label="LinkedIn"><i className="fab fa-linkedin-in"></i></a>
                 <a href="https://www.instagram.com/trueleavessystem/" target="_blank" rel="noreferrer" aria-label="Instagram"><i className="fab fa-instagram"></i></a>
               </div>

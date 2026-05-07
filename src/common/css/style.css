@@ -1216,10 +1216,12 @@ a { text-decoration: none; transition: var(--transition); }
 .footer-newsletter .form-control:focus { background: rgba(255,255,255,0.15); box-shadow: none; border-color: var(--secondary); color: #fff; }
 .footer-newsletter .btn { border-radius: 0 50px 50px 0; padding: 12px 24px; }
 
-.footer-social a {
+.footer-social a,
+.footer-social-btn {
   width: 36px;
   height: 36px;
   background: rgba(255,255,255,0.1);
+  border: none;
   border-radius: 50%;
   display: inline-flex;
   align-items: center;
@@ -1227,10 +1229,13 @@ a { text-decoration: none; transition: var(--transition); }
   color: #fff;
   font-size: 14px;
   margin-right: 8px;
+  padding: 0;
+  cursor: pointer;
   transition: var(--transition);
 }
 
-.footer-social a:hover { background: var(--secondary); transform: translateY(-3px); }
+.footer-social a:hover,
+.footer-social-btn:hover { background: var(--secondary); transform: translateY(-3px); }
 
 .footer-bottom {
   background: var(--primary-dark);
