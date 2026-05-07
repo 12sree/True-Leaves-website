@@ -27,8 +27,8 @@ function Products() {
                 <h6 className="mb-1 px-3">{name}</h6>
                 <h5 className="text-primary px-3">{price}</h5>
                 <div className="btn-action">
-                  <a className="btn btn-sm btn-primary rounded-pill px-3" href="#"><i className="bi bi-cart me-1"></i>Add</a>
-                  <a className="btn btn-sm btn-secondary rounded-pill px-3" href="#"><i className="bi bi-eye me-1"></i>View</a>
+                  <button className="btn btn-sm btn-primary rounded-pill px-3"><i className="bi bi-cart me-1"></i>Add</button>
+                  <button className="btn btn-sm btn-secondary rounded-pill px-3"><i className="bi bi-eye me-1"></i>View</button>
                 </div>
               </div>
             </div>

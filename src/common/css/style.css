@@ -53,12 +53,15 @@ a { text-decoration: none; transition: var(--transition); }
   width: 26px;
   height: 26px;
   background: rgba(255,255,255,0.1);
+  border: none;
   border-radius: 50%;
   display: inline-flex;
   align-items: center;
   justify-content: center;
   color: rgba(255,255,255,0.75);
   font-size: 11px;
+  padding: 0;
+  cursor: pointer;
   transition: var(--transition);
 }
 

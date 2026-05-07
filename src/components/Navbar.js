@@ -31,8 +31,8 @@ function Navbar() {
               <span><i className="bi bi-envelope-fill me-1"></i>reachtrueleaves@gmail.com</span>
             </div>
             <div className="d-flex align-items-center gap-2">
-              <a className="topbar-social" href="#" aria-label="Twitter"><i className="fab fa-twitter"></i></a>
-              <a className="topbar-social" href="#" aria-label="Facebook"><i className="fab fa-facebook-f"></i></a>
+              <button className="topbar-social" aria-label="Twitter"><i className="fab fa-twitter"></i></button>
+              <button className="topbar-social" aria-label="Facebook"><i className="fab fa-facebook-f"></i></button>
               <a className="topbar-social" href="https://www.linkedin.com/company/112359065/admin/page-posts/published/" target="_blank" rel="noreferrer" aria-label="LinkedIn"><i className="fab fa-linkedin-in"></i></a>
               <a className="topbar-social" href="https://www.instagram.com/trueleavessystem/" target="_blank" rel="noreferrer" aria-label="Instagram"><i className="fab fa-instagram"></i></a>
             </div>

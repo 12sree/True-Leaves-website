@@ -24,8 +24,8 @@ function Detail() {
           <div className="row justify-content-start">
             <div className="col-lg-8 text-center text-lg-start">
               <h1 className="display-1 text-white mb-md-4">Blog Detail</h1>
-              <a href="#" className="btn btn-primary py-md-3 px-md-5 me-3">Home</a>
-              <a href="#" className="btn btn-secondary py-md-3 px-md-5">Blog Detail</a>
+              <span className="btn btn-primary py-md-3 px-md-5 me-3">Home</span>
+              <span className="btn btn-secondary py-md-3 px-md-5">Blog Detail</span>
             </div>
           </div>
         </div>
@@ -54,7 +54,7 @@ function Detail() {
                 <div className={`d-flex mb-4 ${indent ? 'ms-5' : ''}`} key={i}>
                   <img src={user} className="img-fluid" style={{ width: '45px', height: '45px' }} alt="User" />
                   <div className="ps-3">
-                    <h6><a href="#">John Doe</a> <small><i>01 Jan 2045</i></small></h6>
+                    <h6><span>John Doe</span> <small><i>01 Jan 2045</i></small></h6>
                     <p>Diam amet duo labore stet elitr invidunt ea clita ipsum voluptua, tempor labore accusam ipsum et no at. Kasd diam tempor rebum magna dolores sed eirmod</p>
                     <button className="btn btn-sm btn-primary">Reply</button>
                   </div>
@@ -99,7 +99,7 @@ function Detail() {
               <h2 className="mb-4">Categories</h2>
               <div className="d-flex flex-column justify-content-start bg-primary p-4">
                 {['Web Design', 'Web Development', 'Web Development', 'Keyword Research', 'Email Marketing'].map((cat, i) => (
-                  <a className="fs-5 fw-bold text-white mb-2" href="#" key={i}><i className="bi bi-arrow-right me-2"></i>{cat}</a>
+                  <span className="fs-5 fw-bold text-white mb-2" key={i}><i className="bi bi-arrow-right me-2"></i>{cat}</span>
                 ))}
               </div>
             </div>
@@ -109,7 +109,7 @@ function Detail() {
                 {recentPosts.map((img, i) => (
                   <div className={`d-flex overflow-hidden ${i < recentPosts.length - 1 ? 'mb-3' : ''}`} key={i}>
                     <img className="img-fluid flex-shrink-0" src={img} style={{ width: '75px' }} alt="Recent" />
-                    <a href="#" className="d-flex align-items-center bg-white text-dark fs-5 fw-bold px-3 mb-0">Lorem ipsum dolor sit amet elit</a>
+                    <span className="d-flex align-items-center bg-white text-dark fs-5 fw-bold px-3 mb-0">Lorem ipsum dolor sit amet elit</span>
                   </div>
                 ))}
               </div>
@@ -121,7 +121,7 @@ function Detail() {
               <h2 className="mb-4">Tag Cloud</h2>
               <div className="d-flex flex-wrap m-n1">
                 {tags.map((tag, i) => (
-                  <a href="#" className="btn btn-primary m-1" key={i}>{tag}</a>
+                  <span className="btn btn-primary m-1" key={i}>{tag}</span>
                 ))}
               </div>
             </div>
@@ -129,7 +129,7 @@ function Detail() {
               <h2 className="mb-4">Plain Text</h2>
               <div className="bg-primary text-center text-white" style={{ padding: '30px' }}>
                 <p>Vero sea et accusam justo dolor accusam lorem consetetur, dolores sit amet sit dolor clita kasd justo, diam accusam no sea ut tempor magna takimata, amet sit et diam dolor ipsum amet diam</p>
-                <a href="#" className="btn btn-secondary py-2 px-4">Read More</a>
+                <button className="btn btn-secondary py-2 px-4">Read More</button>
               </div>
             </div>
           </div>

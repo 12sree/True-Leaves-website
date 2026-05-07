@@ -59,9 +59,9 @@ function Footer() {
               <div className="footer-links">
                 <h5>Our Products</h5>
                 {['Fresh Vegetables', 'Organic Fruits', 'Farm Dairy', 'Healthy Grains', 'Herbal Plants', 'Seasonal Picks'].map((item) => (
-                  <a key={item} href="#">
+                  <span key={item}>
                     <i className="bi bi-chevron-right me-1" style={{ fontSize: '11px' }}></i>{item}
-                  </a>
+                  </span>
                 ))}
               </div>
             </div>
@@ -92,7 +92,7 @@ function Footer() {
       <div className="footer-bottom">
         <div className="container">
           <div className="d-flex flex-column flex-md-row justify-content-between align-items-center gap-2">
-                        <p>&copy; 2024 <a href="#">TrueLeaves System</a>. All Rights Reserved.</p>
+                        <p>&copy; 2024 <span>TrueLeaves System</span>. All Rights Reserved.</p>
             <p>Designed with <i className="bi bi-heart-fill text-secondary mx-1"></i> for organic farming</p>
           </div>
         </div>

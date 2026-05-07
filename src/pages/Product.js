@@ -14,8 +14,8 @@ function Product() {
           <div className="row justify-content-start">
             <div className="col-lg-8 text-center text-lg-start">
               <h1 className="display-1 text-white mb-md-4">Our Products</h1>
-              <a href="#" className="btn btn-primary py-md-3 px-md-5 me-3">Home</a>
-              <a href="#" className="btn btn-secondary py-md-3 px-md-5">Products</a>
+              <span className="btn btn-primary py-md-3 px-md-5 me-3">Home</span>
+              <span className="btn btn-secondary py-md-3 px-md-5">Products</span>
             </div>
           </div>
         </div>
