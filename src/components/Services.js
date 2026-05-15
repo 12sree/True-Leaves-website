@@ -11,31 +11,37 @@ const services = [
   {
     img: service1,
     title: 'Commercial Farming',
+    slug: 'commercial-farming',
     desc: 'This remains a standalone category for large-scale, profit-oriented operations. It covers end-to-end setup for industrial yield, including feasibility studies and site planning.',
   },
   {
     img: service2,
     title: 'Indoor & Vertical Farming',
+    slug: 'indoor-vertical-farming',
     desc: 'Maximize limited space with stacked growing systems and specialized lighting, allowing you to grow fresh produce anywhere, regardless of the climate.',
   },
   {
     img: service3,
     title: 'Home & Terrace Gardening',
+    slug: 'home-terrace-gardening',
     desc: 'Transform your balconies and rooftops into lush, productive green zones with lightweight systems optimized for urban residential spaces.',
   },
   {
     img: service4,
     title: 'Polyhouse & Greenhouse Systems',
+    slug: 'polyhouse-greenhouse-systems',
     desc: 'Climate-resilient structures that protect your crops from external elements while optimizing sunlight and temperature for year-round harvesting.',
   },
   {
     img: service5,
     title: 'Hydroponic Home Kits',
+    slug: 'hydroponic-home-kits',
     desc: 'User-friendly, "plug-and-play" starter sets that include everything a beginner needs to harvest their first pesticide-free greens at home.',
   },
   {
     img: service6,
     title: 'Automation & Smart Solutions',
+    slug: 'automation-smart-solutions',
     desc: 'Take the guesswork out of farming with AI-driven nutrient dosers, remote monitoring sensors, and smart controllers for a hands-off growing experience.',
   },
 ];
@@ -69,7 +75,7 @@ function Services() {
             </p>
           </div>
           <div className="row g-4">
-            {services.map(({ img, title, desc }, i) => (
+            {services.map(({ img, title, slug, desc }, i) => (
               <div className="col-lg-4 col-md-6" key={title} data-aos="fade-up" data-aos-delay={i * 80}>
                 <div className="service-card h-100">
                   <div className="service-card-img">
@@ -78,7 +84,7 @@ function Services() {
                   <div className="service-card-body">
                     <h4 className="service-card-title">{title}</h4>
                     <p className="service-card-desc">{desc}</p>
-                    <Link to="/contact" className="service-card-link">
+                    <Link to={`/service/${slug}`} className="service-card-link">
                       Learn More <i className="bi bi-arrow-right ms-1"></i>
                     </Link>
                   </div>
