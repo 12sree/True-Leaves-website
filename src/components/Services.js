@@ -77,18 +77,18 @@ function Services() {
           <div className="row g-4">
             {services.map(({ img, title, slug, desc }, i) => (
               <div className="col-lg-4 col-md-6" key={title} data-aos="fade-up" data-aos-delay={i * 80}>
-                <div className="service-card h-100">
+                <Link to={`/service/${slug}`} className="service-card h-100 d-block text-decoration-none" style={{ cursor: 'pointer' }}>
                   <div className="service-card-img">
                     <img src={img} alt={title} />
                   </div>
                   <div className="service-card-body">
                     <h4 className="service-card-title">{title}</h4>
                     <p className="service-card-desc">{desc}</p>
-                    <Link to={`/service/${slug}`} className="service-card-link">
+                    <span className="service-card-link">
                       Learn More <i className="bi bi-arrow-right ms-1"></i>
-                    </Link>
+                    </span>
                   </div>
-                </div>
+                </Link>
               </div>
             ))}
           </div>
