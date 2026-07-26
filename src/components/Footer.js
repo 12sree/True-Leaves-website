@@ -54,18 +54,6 @@ function Footer() {
               </div>
             </div>
 
-            {/* Popular Links */}
-            <div className="col-lg-2 col-md-6" data-aos="fade-up" data-aos-delay="200">
-              <div className="footer-links">
-                <h5>Our Products</h5>
-                {['Fresh Vegetables', 'Organic Fruits', 'Farm Dairy', 'Healthy Grains', 'Herbal Plants', 'Seasonal Picks'].map((item) => (
-                  <span key={item}>
-                    <i className="bi bi-chevron-right me-1" style={{ fontSize: '11px' }}></i>{item}
-                  </span>
-                ))}
-              </div>
-            </div>
-
             {/* Newsletter */}
             <div className="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="300">
               <div className="footer-newsletter">
