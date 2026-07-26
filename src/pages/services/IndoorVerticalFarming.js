@@ -1,11 +1,13 @@
 import { Link } from 'react-router-dom';
 import Navbar from '../../components/Navbar';
 import Footer from '../../components/Footer';
-import img from '../../common/img/serivice-2.jpeg';
-import lettuceImg from '../../common/img/lettuce.jpg';
-import strawberryImg from '../../common/img/strawberry.jpg';
+import img from '../../common/img/indoor-6.jpeg';
+import lettuceImg from '../../common/img/indoor-2.jpeg';
+import strawberryImg from '../../common/img/strawberry-5.jpeg';
 import microgreensImg from '../../common/img/microgreens.jpg';
 import edibleFlowerImg from '../../common/img/edible-flower.jpg';
+import babycarrot1 from '../../common/img/babycarrot.jpg';
+import babyradish from '../../common/img/babyradish.jpg';
 
 const keyAdvantages = [
   { icon: 'bi-globe', label: 'Year-Round Production', desc: 'Grow crops continuously without depending on weather or seasons.' },
@@ -27,7 +29,7 @@ const crops = [
   },
   {
     title: 'Baby Carrot Farming',
-    cropImg: null,
+    cropImg: babycarrot1,
     desc: 'Baby carrots are a unique, premium-value crop increasingly demanded in fine dining restaurants, salad brands, and premium retail stores.',
     varieties: ['Baby Carrot'],
     benefits: ['Uniform shape & size', 'Cleaner harvests', 'Better color and texture', 'Controlled growth conditions'],
@@ -43,7 +45,7 @@ const crops = [
   },
   {
     title: 'Baby Radish Farming',
-    cropImg: null,
+    cropImg: babyradish,
     desc: 'Baby radish is a fast-growing specialty crop suitable for controlled indoor farming.',
     varieties: ['Baby Radish', 'French Breakfast Radish', 'Cherry Belle'],
     benefits: ['Quick harvest cycles', 'Crisp texture & vibrant color', 'Ideal for gourmet and salad markets', 'Consistent quality production'],

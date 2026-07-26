@@ -4,7 +4,7 @@ import Footer from '../../components/Footer';
 import img from '../../common/img/service-4.jpeg';
 import capsicumImg from '../../common/img/capsicum.jpg';
 import cherryTomatoImg from '../../common/img/cherry-tomato.jpg';
-import strawberryImg from '../../common/img/strawberry.jpg';
+import strawberryImg from '../../common/img/strawberry.jpeg';
 import lettuceImg from '../../common/img/lettuce.jpg';
 
 const keyBenefits = [

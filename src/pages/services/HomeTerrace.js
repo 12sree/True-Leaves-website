@@ -1,9 +1,9 @@
 import { Link } from 'react-router-dom';
 import Navbar from '../../components/Navbar';
 import Footer from '../../components/Footer';
-import img from '../../common/img/service-3.jpeg';
+import img from '../../common/img/service-5.jpeg';
 import lettuceImg from '../../common/img/lettuce.jpg';
-import strawberryImg from '../../common/img/strawberry.jpg';
+import earnFromHome from '../../common/img/earn-home.jpeg';
 import microgreensImg from '../../common/img/microgreens.jpg';
 import cherryTomatoImg from '../../common/img/cherry-tomato.jpg';
 
@@ -199,7 +199,7 @@ function HomeTerrace() {
         <div className="container">
           <div className="row g-5 align-items-center">
             <div className="col-lg-5" data-aos="fade-right">
-              <img src={strawberryImg} alt="Side Income" className="img-fluid rounded-3 w-100" style={{ objectFit: 'cover', maxHeight: '380px' }} />
+              <img src={earnFromHome} alt="Side Income" className="img-fluid rounded-3 w-100" style={{ objectFit: 'cover', maxHeight: '380px' }} />
             </div>
             <div className="col-lg-7" data-aos="fade-left">
               <span className="section-subtitle">Earn From Home</span>

@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom';
-import about from '../common/img/about.png';
+import aboutImg from '../common/img/commercial-1.jpeg';
 
 const features = [
   {
@@ -32,9 +32,7 @@ function AboutSection() {
 
           {/* Image */}
           <div className="col-lg-6 mb-5 mb-lg-0" data-aos="fade-right">
-            <div className="about-img-wrapper">
-              <img className="img-fluid mx-auto d-block" src={about} alt="About TrueLeaves" />
-            </div>
+            <img src={aboutImg} alt="About TrueLeaves" className="img-fluid rounded-3 w-100" style={{ objectFit: 'cover', maxHeight: '480px' }} />
           </div>
 
           {/* Content */}

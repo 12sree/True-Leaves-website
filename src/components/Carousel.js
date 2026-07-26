@@ -1,4 +1,3 @@
-import { Link } from 'react-router-dom';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Autoplay, EffectFade, Pagination, Navigation } from 'swiper/modules';
 
@@ -7,8 +6,8 @@ import 'swiper/css/effect-fade';
 import 'swiper/css/pagination';
 import 'swiper/css/navigation';
 
-import carousel1 from '../common/img/carousel-1.jpeg';
-import carousel2 from '../common/img/carousel-2.jpeg';
+import carousel1 from '../common/img/commercial-6.jpeg';
+import carousel2 from '../common/img/commercial-7.jpeg';
 
 const slides = [
   {
@@ -16,20 +15,12 @@ const slides = [
     badge: 'Advanced Hydroponic Solutions',
     title: 'Grow More. Use Less. Earn Better.',
     desc: 'Advanced Hydroponic Solutions for Commercial Farms, Urban Homes & Smart Growers.',
-    btns: [
-      { label: 'Start Your Commercial Farm', to: '/contact', style: 'btn-secondary' },
-      { label: 'Start Growing With Grow Kits', to: '/product', style: 'btn-outline-light' },
-    ],
   },
   {
     img: carousel2,
     badge: 'Smart Growing Technology',
     title: 'Grow More. Use Less. Earn Better.',
     desc: 'Advanced Hydroponic Solutions for Commercial Farms, Urban Homes & Smart Growers.',
-    btns: [
-      { label: 'Start Your Commercial Farm', to: '/contact', style: 'btn-secondary' },
-      { label: 'Start Growing With Grow Kits', to: '/product', style: 'btn-outline-light' },
-    ],
   },
 ];
 
@@ -45,7 +36,7 @@ function Carousel() {
         loop={true}
         className="hero-swiper"
       >
-        {slides.map(({ img, badge, title, desc, btns }, i) => (
+        {slides.map(({ img, badge, title, desc }, i) => (
           <SwiperSlide key={i}>
             <div className="hero-slide" style={{ backgroundImage: `url(${img})` }}>
               <div className="hero-overlay"></div>
@@ -57,14 +48,6 @@ function Carousel() {
                     </span>
                     <h1 className="hero-title">{title}</h1>
                     <p className="hero-desc">{desc}</p>
-                    <div className="d-flex gap-3 flex-wrap">
-                      {btns.map(({ label, to, style }) => (
-                        <Link key={label} to={to} className={`btn ${style} btn-lg rounded-pill px-4`}>
-                          <i className={`bi ${style === 'btn-secondary' ? 'bi-building' : 'bi-basket'} me-2`}></i>
-                          {label}
-                        </Link>
-                      ))}
-                    </div>
                   </div>
                 </div>
               </div>

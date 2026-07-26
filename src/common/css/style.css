@@ -1248,7 +1248,7 @@ a { text-decoration: none; transition: var(--transition); }
 /********** Hero Page Banner **********/
 .page-hero {
   background: linear-gradient(135deg, rgba(26,82,38,0.92), rgba(45,122,58,0.85)),
-    url('../img/carousel-1.jpeg') center/cover no-repeat;
+    url('../img/commercial-6.jpeg') center/cover no-repeat;
   padding: 100px 0 80px;
 }
 

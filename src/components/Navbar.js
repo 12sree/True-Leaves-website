@@ -17,7 +17,7 @@ function Navbar() {
     setMenuOpen(false);
   }, [location]);
 
-  const isActive = (path) => location.pathname === path;
+  const isActive = (path) => path === '/' ? location.pathname === path : location.pathname.startsWith(path);
 
   return (
     <>
@@ -59,10 +59,10 @@ function Navbar() {
           <div className="navbar-nav mx-auto py-0">
             {[
               { path: '/', label: 'Home' },
-              { path: '/about', label: 'About' },
               { path: '/service', label: 'Service' },
               { path: '/product', label: 'Product' },
               { path: '/gallery', label: 'Gallery' },
+              { path: '/about', label: 'About' },
               { path: '/contact', label: 'Contact' },
             ].map(({ path, label }) => (
               <Link key={path} to={path} className={`nav-item nav-link ${isActive(path) ? 'active' : ''}`}>

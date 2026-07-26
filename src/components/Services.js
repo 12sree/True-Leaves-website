@@ -1,15 +1,15 @@
 import { Link } from 'react-router-dom';
 
-import service1 from '../common/img/service-1.jpeg';
-import service2 from '../common/img/serivice-2.jpeg';
-import service3 from '../common/img/service-3.jpeg';
-import service4 from '../common/img/service-4.jpeg';
-import service5 from '../common/img/service-5.jpeg';
-import service6 from '../common/img/service-6.jpeg';
+import commercial1 from '../common/img/commercial.jpg';
+import service2 from '../common/img/indoor-3.jpeg';
+import service3 from '../common/img/service-6.jpeg';
+import service4 from '../common/img/poly-house.jpg';
+import service5 from '../common/img/indoor-5.jpeg';
+import service6 from '../common/img/cherry-tomato.jpg';
 
 const services = [
   {
-    img: service1,
+    img: commercial1,
     title: 'Commercial Farming',
     slug: 'commercial-farming',
     desc: 'This remains a standalone category for large-scale, profit-oriented operations. It covers end-to-end setup for industrial yield, including feasibility studies and site planning.',

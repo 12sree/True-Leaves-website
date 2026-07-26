@@ -1,11 +1,13 @@
 import { Link } from 'react-router-dom';
 import Navbar from '../../components/Navbar';
 import Footer from '../../components/Footer';
-import img from '../../common/img/service-1.jpeg';
+import commercialImg from '../../common/img/commercial-1.jpeg';
 import cherryTomatoImg from '../../common/img/cherry-tomato.jpg';
 import capsicumImg from '../../common/img/capsicum.jpg';
-import strawberryImg from '../../common/img/strawberry.jpg';
+import strawberryImg from '../../common/img/strawberry.jpeg';
 import lettuceImg from '../../common/img/lettuce.jpg';
+import cucumberImg from '../../common/img/cucumber-2.jpeg';
+import broccoliImg from '../../common/img/commercial.jpg';
 
 const keyBenefits = [
   { icon: 'bi-droplet-half', label: 'Up to 90% Water Saving' },
@@ -43,7 +45,7 @@ const crops = [
   },
   {
     title: 'Hydroponic Cucumber Farming',
-    cropImg: null,
+    cropImg: cucumberImg,
     desc: 'Hydroponic cucumbers deliver faster growth, better fruit uniformity, and higher production rates.',
     varieties: ['Greenhouse Cucumber', 'Mini Cucumber', 'English Cucumber'],
     benefits: ['Continuous harvesting', 'Strong market demand', 'Excellent yield potential', 'Suitable for greenhouse farming'],
@@ -59,7 +61,7 @@ const crops = [
   },
   {
     title: 'Broccoli & Specialty Crops',
-    cropImg: null,
+    cropImg: broccoliImg,
     desc: 'Hydroponics also supports specialty and premium crops highly demanded in premium restaurants, organic stores, export markets, and health food sectors.',
     varieties: ['Broccoli', 'Celery', 'Basil', 'Mint', 'Coriander', 'Parsley', 'Microgreens', 'Edible Flowers'],
     benefits: ['Export market potential', 'Premium restaurant demand', 'High value per kg', 'Fast turnaround cycles'],
@@ -124,7 +126,7 @@ function CommercialFarming() {
       </div>
 
       {/* Full Width Image */}
-      <img src={img} alt="Commercial Farming" style={{ width: '100%', height: '480px', objectFit: 'cover', display: 'block' }} />
+      <img src={commercialImg} alt="Commercial Farming" style={{ width: '100%', height: '480px', objectFit: 'cover', display: 'block' }} />
 
       {/* Intro */}
       <div className="container py-5">
