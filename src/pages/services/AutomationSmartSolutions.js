@@ -1,7 +1,7 @@
 import { Link } from 'react-router-dom';
 import Navbar from '../../components/Navbar';
 import Footer from '../../components/Footer';
-import img from '../../common/img/service-6.jpeg';
+import img from '../../common/img/automation-6.jpeg';
 
 const keyBenefits = [
   { icon: 'bi-phone', label: 'Remote Monitoring', desc: 'Monitor your farm from anywhere via smartphone or tablet in real time.' },
@@ -46,6 +46,10 @@ const sensors = [
   { icon: 'bi-droplet', label: 'Humidity Sensors', desc: 'Track relative humidity to prevent disease and optimize growth.' },
   { icon: 'bi-sun', label: 'Light Sensors', desc: 'Measure light intensity and automate grow light schedules.' },
   { icon: 'bi-water', label: 'Water Level Sensors', desc: 'Automatically detect and alert low reservoir water levels.' },
+  { icon: 'bi-thermometer-half', label: 'CO2 Mointors', desc: 'Monitor air and water temperature in real time.' },
+  { icon: 'bi-droplet', label: 'Water O2 Level Monitors', desc: 'Track relative humidity to prevent disease and optimize growth.' },
+  { icon: 'bi-sun', label: 'Water Consumption Monitors', desc: 'Measure light intensity and automate grow light schedules.' },
+  { icon: 'bi-water', label: 'Electricity Power Consumption Monitors', desc: 'Automatically detect and alert low reservoir water levels.' },
 ];
 
 const solutions = [

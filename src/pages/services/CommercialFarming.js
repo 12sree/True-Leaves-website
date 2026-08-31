@@ -13,7 +13,7 @@ const keyBenefits = [
   { icon: 'bi-droplet-half', label: 'Up to 90% Water Saving' },
   { icon: 'bi-graph-up-arrow', label: 'Higher Yield Per Sq.ft' },
   { icon: 'bi-star-fill', label: 'Premium Crop Quality' },
-  { icon: 'bi-lightning-charge', label: 'Faster Growth Cycles' },
+  { icon: 'bi-lightning-charge', label: 'Scalable for Any Size Farm' },
   { icon: 'bi-shield-check', label: 'Reduced Soil-Related Problems' },
   { icon: 'bi-calendar-check', label: 'Consistent Year-Round Production' },
 ];

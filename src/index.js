@@ -10,6 +10,11 @@ import './common/css/style.css';
 import 'bootstrap-icons/font/bootstrap-icons.css';
 import '@fortawesome/fontawesome-free/css/all.min.css';
 
+import 'swiper/css';
+import 'swiper/css/effect-fade';
+import 'swiper/css/pagination';
+import 'swiper/css/navigation';
+
 AOS.init({ duration: 800, once: true, offset: 80 });
 
 const root = ReactDOM.createRoot(document.getElementById('root'));

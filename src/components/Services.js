@@ -2,10 +2,10 @@ import { Link } from 'react-router-dom';
 
 import commercial1 from '../common/img/commercial.jpg';
 import service2 from '../common/img/indoor-3.jpeg';
-import service3 from '../common/img/service-6.jpeg';
-import service4 from '../common/img/poly-house.jpg';
+import service3 from '../common/img/fruitingcrops.jpeg';
+import polyhouse from '../common/img/polyhouse-2.jpeg';
 import service5 from '../common/img/indoor-5.jpeg';
-import service6 from '../common/img/cherry-tomato.jpg';
+import automationImg from '../common/img/automation-3.jpeg';
 
 const services = [
   {
@@ -27,7 +27,7 @@ const services = [
     desc: 'Transform your balconies and rooftops into lush, productive green zones with lightweight systems optimized for urban residential spaces.',
   },
   {
-    img: service4,
+    img: polyhouse,
     title: 'Polyhouse & Greenhouse Systems',
     slug: 'polyhouse-greenhouse-systems',
     desc: 'Climate-resilient structures that protect your crops from external elements while optimizing sunlight and temperature for year-round harvesting.',
@@ -39,7 +39,7 @@ const services = [
     desc: 'User-friendly, "plug-and-play" starter sets that include everything a beginner needs to harvest their first pesticide-free greens at home.',
   },
   {
-    img: service6,
+    img: automationImg,
     title: 'Automation & Smart Solutions',
     slug: 'automation-smart-solutions',
     desc: 'Take the guesswork out of farming with AI-driven nutrient dosers, remote monitoring sensors, and smart controllers for a hands-off growing experience.',

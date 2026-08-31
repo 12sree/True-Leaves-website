@@ -28,7 +28,6 @@ import clayballs2 from '../common/img/clayballs-2.jpg';
 import clayballs3 from '../common/img/clayballs-3.jpg';
 import seedlingpot1 from '../common/img/seedlingpot-1.jpg';
 import seedlingpot2 from '../common/img/seedlingpot-2.jpg';
-import unknown from '../common/img/unknown.jpg';
 import seedlingtray1 from '../common/img/seedlingtray-1.jpg';
 import seedlingtray2 from '../common/img/seedlingtray-2.jpg';
 import seedlingtray98_1 from '../common/img/seedlingtray98-1.jpg';
@@ -157,13 +156,6 @@ const categories = [
       { code: 'UR028', name: 'Single-Walled 2" End Cap Spout', desc: 'Food-grade uPVC leak-proof end cap with spout for NFT hydroponic channels.', imgs: [endcapspout1, endcapspout2, endcapspout3] },
       { code: 'UR029', name: 'Single-Walled 2" Coupler (Openable)', desc: 'Food-grade uPVC leak-proof openable coupler for connecting NFT hydroponic channels.', imgs: [coupleropen2, coupleropen1] },
       { code: 'UR030', name: 'Dutch Bucket Set (with Lid & Grow Cup)', desc: 'Durable hydroponic bucket with lid, grow cup, and siphon for efficient vine crop cultivation.', imgs: [dutchbucketset1, dutchbucketset2, dutchbucketset3] },
-    ],
-  },
-  {
-    label: 'Nutrients & pH',
-    products: [
-      { code: 'UR036–038', name: 'Hydroponic Nutrient Powder (A & B)', desc: 'Water-soluble two-part formula for balanced growth, strong roots, and lush foliage in hydroponic systems.', imgs: [unknown] },
-      { code: 'UR039', name: 'pH Up Solution', desc: 'Water-soluble liquid to safely raise hydroponic nutrient pH for optimal nutrient absorption.', imgs: [unknown] },
     ],
   },
 ];

@@ -43,7 +43,7 @@ function AboutSection() {
               <strong>True Leaves System</strong> is a dedicated hydroponic solutions company helping commercial farmers, urban growers, and entrepreneurs build profitable, sustainable farms.
             </p>
             <p className="text-muted mb-4">
-              We provide end-to-end support — from system design and installation to training and ongoing guidance — so you can grow more, use less, and earn better.
+              We provide end-to-end support — from system design and installation to training and ongoing guidance — so you can use less, grow more, earn better.
             </p>
 
             {/* Feature Cards */}
@@ -63,7 +63,7 @@ function AboutSection() {
               <Link to="/service" className="btn btn-primary rounded-pill px-4">
                 <i className="bi bi-grid me-2"></i>Our Services
               </Link>
-              <Link to="/contact" className="btn btn-outline-secondary rounded-pill px-4">
+              <Link to="/enquiry-form" className="btn btn-outline-secondary rounded-pill px-4">
                 <i className="bi bi-telephone me-2"></i>Talk to an Expert
               </Link>
             </div>

@@ -1,0 +1,160 @@
+/* General form wrapper */
+.enquiry-form {
+    max-width: 900px;
+    margin: 2rem auto;
+    padding: 2rem;
+    background: #f9f9f9;
+    border-radius: 8px;
+    font-family: "Segoe UI", sans-serif;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* Headings */
+.enquiry-form h2 {
+    text-align: center;
+    margin-bottom: 2rem;
+    color: #2c3e50;
+}
+
+.enquiry-form section {
+    margin-bottom: 1.5rem;
+}
+
+.enquiry-form h3 {
+    font-size: 1.1rem;
+    margin-bottom: 0.75rem;
+    color: #34495e;
+    border-left: 4px solid #27ae60;
+    padding-left: 0.5rem;
+}
+
+/* Inputs */
+.enquiry-form input,
+.enquiry-form select,
+.enquiry-form textarea {
+    width: 100%;
+    padding: 0.6rem 0.8rem;
+    margin-bottom: 0.8rem;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 0.95rem;
+    transition: border-color 0.2s ease;
+}
+
+.enquiry-form input:focus,
+.enquiry-form select:focus,
+.enquiry-form textarea:focus {
+    border-color: #27ae60;
+    outline: none;
+}
+
+/* Radio & Checkbox groups */
+.enquiry-form label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-size: 0.95rem;
+    cursor: pointer;
+}
+
+.enquiry-form input[type="radio"],
+.enquiry-form input[type="checkbox"] {
+    margin-right: 0.5rem;
+    accent-color: #27ae60;
+    /* modern browsers */
+}
+
+/* Textarea */
+.enquiry-form textarea {
+    min-height: 100px;
+    resize: vertical;
+}
+
+/* File upload */
+.enquiry-form input[type="file"] {
+    border: none;
+    padding: 0;
+}
+
+/* Submit button */
+.enquiry-form button {
+    display: block;
+    width: 100%;
+    padding: 0.8rem;
+    background: #27ae60;
+    color: #fff;
+    font-size: 1rem;
+    font-weight: 600;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.enquiry-form button:hover {
+    background: #219150;
+}
+
+/* Group radios/checkboxes in a flex row */
+.enquiry-form .option-group {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    /* spacing between options */
+}
+
+.enquiry-form .option-group label {
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    padding: 0.4rem 0.8rem;
+    cursor: pointer;
+    font-size: 0.95rem;
+}
+
+/* Make inputs consistent size */
+.enquiry-form input[type="radio"],
+.enquiry-form input[type="checkbox"] {
+    width: 16px;
+    height: 16px;
+    accent-color: #27ae60;
+}
+
+/* Group wrapper for options */
+.option-group {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 0.75rem;
+    margin-top: 0.5rem;
+}
+
+/* Each option styled like a pill/box */
+.option-group label {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    padding: 0.5rem 0.8rem;
+    cursor: pointer;
+    font-size: 0.95rem;
+    transition: border-color 0.2s ease, background 0.2s ease;
+}
+
+.option-group label:hover {
+    border-color: #27ae60;
+    background: #f4fdf7;
+}
+
+/* Inputs consistent size */
+.option-group input[type="radio"],
+.option-group input[type="checkbox"] {
+    width: 16px;
+    height: 16px;
+    accent-color: #27ae60;
+    margin-bottom: 0px;
+    /* modern browsers */
+}

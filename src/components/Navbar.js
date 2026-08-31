@@ -59,16 +59,50 @@ function Navbar() {
           <div className="navbar-nav mx-auto py-0">
             {[
               { path: '/', label: 'Home' },
-              { path: '/service', label: 'Service' },
+              {
+                path: '/service',
+                label: 'Service',
+                submenu: [
+                  { path: '/service/commercial-farming', label: 'Commercial Farming' },
+                  { path: '/service/indoor-vertical-farming', label: 'Indoor Vertical Farming' },
+                  { path: '/service/home-terrace-gardening', label: 'Home Terrace Gardening' },
+                  { path: '/service/polyhouse-greenhouse-systems', label: 'Polyhouse Greenhouse Systems' },
+                  { path: '/service/hydroponic-home-kits', label: 'Hydroponic Home Kits' },
+                  { path: '/service/automation-smart-solutions', label: 'Automation & Smart Solutions' },
+                ]
+              },
               { path: '/product', label: 'Product' },
               { path: '/gallery', label: 'Gallery' },
               { path: '/about', label: 'About' },
               { path: '/contact', label: 'Contact' },
-            ].map(({ path, label }) => (
-              <Link key={path} to={path} className={`nav-item nav-link ${isActive(path) ? 'active' : ''}`}>
-                {label}
-              </Link>
-            ))}
+            ].map(({ path, label, submenu }) =>
+              submenu ? (
+                <div key={path} className="nav-item dropdown">
+                  <Link
+                    to={path}
+                    className={`nav-link dropdown-toggle ${isActive(path) ? 'active' : ''}`}
+                    data-bs-toggle="dropdown"
+                  >
+                    {label}
+                  </Link>
+                  <div className="dropdown-menu">
+                    {submenu.map(({ path, label }) => (
+                      <Link key={path} to={path} className="dropdown-item">
+                        {label}
+                      </Link>
+                    ))}
+                  </div>
+                </div>
+              ) : (
+                <Link
+                  key={path}
+                  to={path}
+                  className={`nav-item nav-link ${isActive(path) ? 'active' : ''}`}
+                >
+                  {label}
+                </Link>
+              )
+            )}
           </div>
         </div>
       </nav>

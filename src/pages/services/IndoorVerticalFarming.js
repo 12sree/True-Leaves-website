@@ -32,7 +32,7 @@ const crops = [
     cropImg: babycarrot1,
     desc: 'Baby carrots are a unique, premium-value crop increasingly demanded in fine dining restaurants, salad brands, and premium retail stores.',
     varieties: ['Baby Carrot'],
-    benefits: ['Uniform shape & size', 'Cleaner harvests', 'Better color and texture', 'Controlled growth conditions'],
+    benefits: ['Colorful carrots','baby potatoes','baby beetroot','Uniform shape & size', 'Cleaner harvests', 'Better color and texture', 'Controlled growth conditions'],
     icon: 'bi-brightness-high',
   },
   {
@@ -147,7 +147,7 @@ function IndoorVerticalFarming() {
             <div className="p-4 rounded-3 bg-light border-start border-4 border-primary">
               <h5 className="mb-3">Using controlled lighting, nutrient management, and precision farming techniques, indoor hydroponics delivers:</h5>
               <div className="row g-2 mb-4">
-                {['Consistent quality', 'Faster crop cycles', 'Higher productivity per sq.ft', 'Clean and premium harvests year-round'].map((item) => (
+                {['Consistent quality', 'Sustainable farming', 'Higher productivity per sq.ft', 'Clean and premium harvests year-round'].map((item) => (
                   <div className="col-md-6" key={item}>
                     <div className="d-flex align-items-center gap-2">
                       <i className="bi bi-check-circle-fill text-primary"></i>

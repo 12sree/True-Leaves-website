@@ -1,11 +1,12 @@
 import { Link } from 'react-router-dom';
 import Navbar from '../../components/Navbar';
 import Footer from '../../components/Footer';
-import img from '../../common/img/service-5.jpeg';
-import lettuceImg from '../../common/img/lettuce.jpg';
-import earnFromHome from '../../common/img/earn-home.jpeg';
-import microgreensImg from '../../common/img/microgreens.jpg';
-import cherryTomatoImg from '../../common/img/cherry-tomato.jpg';
+import kitchenGarden1 from '../../common/img/kitchengarden-1.jpeg';
+import kitchenGarden2 from '../../common/img/kitchengarden-2.jpeg';
+import poratableUnits from '../../common/img/portaableunits.jpeg';
+import leafyGreensImg from '../../common/img/leafygreens-1.jpeg';
+import fruitingCrops from '../../common/img/fruitingcrops.jpeg';
+import herbsImg from '../../common/img/herbs-1.jpeg';
 
 const keyBenefits = [
   { icon: 'bi-flower1', label: 'Grow Fresh & Healthy Food', desc: 'Harvest clean, fresh vegetables directly from your home garden.' },
@@ -18,25 +19,31 @@ const keyBenefits = [
 const cropCategories = [
   {
     title: 'Leafy Greens',
-    cropImg: lettuceImg,
+    cropImg: leafyGreensImg,
     icon: 'bi-flower1',
     items: ['Lettuce', 'Spinach', 'Kale', 'Pak Choi', 'Swiss Chard', 'Desi Greens'],
   },
   {
     title: 'Herbs',
-    cropImg: null,
+    cropImg: herbsImg,
     icon: 'bi-tree',
     items: ['Mint', 'Basil', 'Coriander', 'Parsley', 'Thyme', 'Rosemary'],
   },
   {
-    title: 'Fruiting Crops',
-    cropImg: cherryTomatoImg,
-    icon: 'bi-heart-fill',
-    items: ['Cherry Tomato', 'Strawberry', 'Chilli', 'Cucumber', 'Tomato', 'Desi Vegetables'],
+    title: 'Specialty Crops',
+    cropImg: fruitingCrops,
+    icon: 'bi-star-fill',
+    items: ['Microgreens', 'Edible Flowers', 'Baby Leaf Greens', 'Cauliflower', 'Cabbage', 'Broccoli'],
   },
   {
-    title: 'Specialty Crops',
-    cropImg: microgreensImg,
+    title: 'Portable farms',
+    cropImg: poratableUnits,
+    icon: 'bi-star-fill',
+    items: ['Microgreens', 'Edible Flowers', 'Baby Leaf Greens', 'Cauliflower', 'Cabbage', 'Broccoli'],
+  },
+  {
+    title: 'Kitchen gardens',
+    cropImg: kitchenGarden2,
     icon: 'bi-star-fill',
     items: ['Microgreens', 'Edible Flowers', 'Baby Leaf Greens', 'Cauliflower', 'Cabbage', 'Broccoli'],
   },
@@ -80,7 +87,7 @@ function HomeTerrace() {
       </div>
 
       {/* Full Width Image */}
-      <img src={img} alt="Home & Terrace Gardening" style={{ width: '100%', height: '480px', objectFit: 'cover', display: 'block' }} />
+      <img src={leafyGreensImg} alt="Home & Terrace Gardening" style={{ width: '100%', height: '480px', objectFit: 'cover', display: 'block' }} />
 
       {/* Intro */}
       <div className="container py-5">
@@ -199,11 +206,12 @@ function HomeTerrace() {
         <div className="container">
           <div className="row g-5 align-items-center">
             <div className="col-lg-5" data-aos="fade-right">
-              <img src={earnFromHome} alt="Side Income" className="img-fluid rounded-3 w-100" style={{ objectFit: 'cover', maxHeight: '380px' }} />
+              <img src={kitchenGarden1} alt="Side Income" className="img-fluid rounded-3 w-100" style={{ objectFit: 'cover', maxHeight: '380px' }} />
             </div>
             <div className="col-lg-7" data-aos="fade-left">
               <span className="section-subtitle">Earn From Home</span>
               <h3 className="section-title mb-3">Small Income Opportunity for Home Growers</h3>
+              <h4 className="text-muted mb-3">supporting side hustle and home needs</h4>
               <p className="text-muted mb-4">Home hydroponic gardening can also create a small side income opportunity. Many home growers sell:</p>
               <div className="row g-3 mb-4">
                 <div className="col-md-6">

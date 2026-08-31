@@ -1,11 +1,6 @@
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Autoplay, EffectFade, Pagination, Navigation } from 'swiper/modules';
 
-import 'swiper/css';
-import 'swiper/css/effect-fade';
-import 'swiper/css/pagination';
-import 'swiper/css/navigation';
-
 import carousel1 from '../common/img/commercial-6.jpeg';
 import carousel2 from '../common/img/commercial-7.jpeg';
 
@@ -13,13 +8,13 @@ const slides = [
   {
     img: carousel1,
     badge: 'Advanced Hydroponic Solutions',
-    title: 'Grow More. Use Less. Earn Better.',
+    title: 'Use less, grow more, earn better',
     desc: 'Advanced Hydroponic Solutions for Commercial Farms, Urban Homes & Smart Growers.',
   },
   {
     img: carousel2,
     badge: 'Smart Growing Technology',
-    title: 'Grow More. Use Less. Earn Better.',
+    title: 'Use less, grow more, earn better',
     desc: 'Advanced Hydroponic Solutions for Commercial Farms, Urban Homes & Smart Growers.',
   },
 ];
