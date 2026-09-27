@@ -1,11 +1,12 @@
 import { useState, useEffect } from 'react';
-import { Link, useLocation } from 'react-router-dom';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
 import logo from '../common/img/true-leaves-logo-inverted.png';
 
 function Navbar() {
   const [scrolled, setScrolled] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
   const location = useLocation();
+  const navigate = useNavigate();
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 50);
@@ -18,6 +19,28 @@ function Navbar() {
   }, [location]);
 
   const isActive = (path) => path === '/' ? location.pathname === path : location.pathname.startsWith(path);
+
+  // Helper function to handle section anchor routing & scrolling
+  const handleScrollToSection = (e, sectionId) => {
+    e.preventDefault();
+
+    if (location.pathname !== '/product') {
+      // If user is on another page, navigate to /product first, then scroll down
+      navigate('/product');
+      setTimeout(() => {
+        const element = document.getElementById(sectionId);
+        if (element) {
+          element.scrollIntoView({ behavior: 'smooth' });
+        }
+      }, 100);
+    } else {
+      // If user is already on /product page, smooth scroll immediately
+      const element = document.getElementById(sectionId);
+      if (element) {
+        element.scrollIntoView({ behavior: 'smooth' });
+      }
+    }
+  };
 
   return (
     <>
@@ -71,26 +94,49 @@ function Navbar() {
                   { path: '/service/automation-smart-solutions', label: 'Automation & Smart Solutions' },
                 ]
               },
-              { path: '/product', label: 'Product' },
+              {
+                path: '/product', label: 'Product',
+                submenu: [
+                  { targetId: 'growing-media', label: 'Growing Media' },
+                  { targetId: 'pots-supports', label: 'Pots & Supports' },
+                  { targetId: 'hydroponic-net-pots', label: 'Hydroponic Net Pots' },
+                  { targetId: 'grow-cubes-germination', label: 'Grow Cubes & Germination' },
+                  { targetId: 'trays-seedling', label: 'Trays & Seedling' },
+                  { targetId: 'nft-channels-fittings', label: 'NFT Channels & Fittings' },
+                ]
+              },
               { path: '/gallery', label: 'Gallery' },
               { path: '/about', label: 'About' },
               { path: '/contact', label: 'Contact' },
             ].map(({ path, label, submenu }) =>
               submenu ? (
-                <div key={path} className="nav-item dropdown">
+                <div key={label} className="nav-item dropdown">
                   <Link
-                    to={path}
+                    to={path || "#"}
                     className={`nav-link dropdown-toggle ${isActive(path) ? 'active' : ''}`}
                     data-bs-toggle="dropdown"
                   >
                     {label}
                   </Link>
                   <div className="dropdown-menu">
-                    {submenu.map(({ path, label }) => (
-                      <Link key={path} to={path} className="dropdown-item">
-                        {label}
-                      </Link>
-                    ))}
+                    {submenu.map((subitem) =>
+                      subitem.targetId ? (
+                        /* Anchor links for Product subsections */
+                        <a
+                          key={subitem.targetId}
+                          href={`#${subitem.targetId}`}
+                          className="dropdown-item"
+                          onClick={(e) => handleScrollToSection(e, subitem.targetId)}
+                        >
+                          {subitem.label}
+                        </a>
+                      ) : (
+                        /* Normal links for Service subpages */
+                        <Link key={subitem.path} to={subitem.path} className="dropdown-item">
+                          {subitem.label}
+                        </Link>
+                      )
+                    )}
                   </div>
                 </div>
               ) : (

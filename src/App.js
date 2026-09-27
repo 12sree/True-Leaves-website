@@ -17,7 +17,9 @@ import Product from './pages/Product';
 import Gallery from './pages/Gallery';
 import ScrollToTop from './components/ScrollToTop';
 
-const WA_LINK = "https://wa.me/918870309890?text=Hi";
+import { businessNumber } from './common/constant';
+
+const WA_LINK = `https://wa.me/${businessNumber}?text=Hi`;
 
 function App() {
   return (

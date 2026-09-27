@@ -5,7 +5,6 @@ const quickLinks = [
   { path: '/about', label: 'About Us' },
   { path: '/service', label: 'Our Services' },
   { path: '/product', label: 'Our Products' },
-  { path: '/blog', label: 'Latest Blog' },
   { path: '/contact', label: 'Contact Us' },
 ];
 

@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
+import { businessNumber } from '../common/constant';
 
 function EnquiryForm() {
     const [formData, setFormData] = useState({
@@ -79,8 +80,6 @@ ${formData.additional}
   `;
 
         const encodedMessage = encodeURIComponent(message);
-        const businessNumber = "918870309890"; // replace with your WhatsApp number
-
         // Open WhatsApp
         window.open(`https://wa.me/${businessNumber}?text=${encodedMessage}`, "_blank");
 

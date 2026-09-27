@@ -1,23 +1,24 @@
 import { useState } from 'react';
+import { businessNumber } from '../common/constant';
 
 // ── assign real images here ──────────────────────────────────────────────────
-import cocopeat1  from '../common/img/cocopeat-1.jpeg';
-import cocopeat2  from '../common/img/cocopeat-2.jpeg';
-import cocopeat3  from '../common/img/cocopeat-3.jpeg';
-import cocopeat4  from '../common/img/cocopeat-4.jpg';
+import cocopeat1 from '../common/img/cocopeat-1.jpeg';
+import cocopeat2 from '../common/img/cocopeat-2.jpeg';
+import cocopeat3 from '../common/img/cocopeat-3.jpeg';
+import cocopeat4 from '../common/img/cocopeat-4.jpg';
 import coconutmusk01 from '../common/img/coconut-musk-01.jpeg';
 import coconutmusk02 from '../common/img/coconut-musk-02.jpeg';
 import coconutmusk03 from '../common/img/coconut-musk-03.jpeg';
-import creepers1  from '../common/img/creepers-1.jpeg';
-import creepers2  from '../common/img/creepers-2.jpeg';
-import creepers3  from '../common/img/creepers-3.jpg';
-import cocopeatdisc1  from '../common/img/cocopeatdisc-1.jpeg';
-import cocopeatdisc2  from '../common/img/cocopeatdisc-2.jpeg';
-import cocopeatdisc3  from '../common/img/cocopeatdisc-3.jpeg';
-import coirpots1  from '../common/img/coirpots-1.jpeg';
-import coirpots2  from '../common/img/coirpots-2.jpeg';
-import coirpots3  from '../common/img/coirpots-3.jpeg';
-import coirpots4  from '../common/img/coirpots-4.jpg';
+import creepers1 from '../common/img/creepers-1.jpeg';
+import creepers2 from '../common/img/creepers-2.jpeg';
+import creepers3 from '../common/img/creepers-3.jpg';
+import cocopeatdisc1 from '../common/img/cocopeatdisc-1.jpeg';
+import cocopeatdisc2 from '../common/img/cocopeatdisc-2.jpeg';
+import cocopeatdisc3 from '../common/img/cocopeatdisc-3.jpeg';
+import coirpots1 from '../common/img/coirpots-1.jpeg';
+import coirpots2 from '../common/img/coirpots-2.jpeg';
+import coirpots3 from '../common/img/coirpots-3.jpeg';
+import coirpots4 from '../common/img/coirpots-4.jpg';
 import pottingmix1 from '../common/img/pottingmix-1.jpeg';
 import pottingmix2 from '../common/img/pottingmix-2.jpeg';
 import pottingmix3 from '../common/img/pottingmix-3.jpeg';
@@ -95,6 +96,7 @@ import hydronetpot5_2 from '../common/img/hydronetpot5-2.jpeg';
 const categories = [
   {
     label: 'Growing Media',
+    id: "growing-media",
     products: [
       { code: 'UR001', name: 'Low EC Cocopeat Block 5kg (Home Garden)', desc: 'Natural cocopeat growing medium – lightweight, eco-friendly, perfect for seed germination & all indoor/outdoor plants.', imgs: [cocopeat1, cocopeat3] },
       { code: 'UR002', name: 'Low EC Sterilized Cocopeat Block 5kg', desc: 'Natural cocopeat growing medium – lightweight, eco-friendly, perfect for seed germination & all indoor/outdoor plants.', imgs: [cocopeat2, cocopeat4] },
@@ -107,6 +109,7 @@ const categories = [
   },
   {
     label: 'Pots & Supports',
+    id: "pots-supports",
     products: [
       { code: 'UR004', name: 'Coco Pole Plant Support Stake', desc: 'Eco-friendly coir poles – sturdy support for creepers & ornamentals, boosting root growth, moisture, and healthy plants.', imgs: [creepers1, creepers2, creepers3] },
       { code: 'UR006', name: 'Coir Pots', desc: 'Biodegradable coir pots – eco-friendly, promote root aeration, easy for seed germination & sapling growth.', imgs: [coirpots1, coirpots2, coirpots3, coirpots4] },
@@ -115,6 +118,7 @@ const categories = [
   },
   {
     label: 'Hydroponic Net Pots',
+    id: "hydroponic-net-pots",
     products: [
       { code: 'UR009', name: 'Hydroponic Net Pot 2"', desc: 'Durable mesh planters for superior root aeration, drainage, and healthy plant growth.', imgs: [hydronetpot2_1, hydronetpot2_2, hydronetpot2_3] },
       { code: 'UR010', name: 'Hydroponic Net Pot 2.5"', desc: 'Durable mesh planter for optimal root aeration, drainage, and healthy hydroponic growth.', imgs: [hydronetpot2_5_1, hydronetpot2_5_2, hydronetpot2_5_3] },
@@ -126,6 +130,7 @@ const categories = [
   },
   {
     label: 'Grow Cubes & Germination',
+    id: "grow-cubes-germination",
     products: [
       { code: 'UR015', name: 'Grow Cubes 25×25×35mm (156 cubes/sheet)', desc: 'Sheet: 325×305×35mm. Biodegradable germination medium for fast, healthy seedling growth, ideal for hydroponics and soil transplanting.', imgs: [growcubes1, growcubes2] },
       { code: 'UR016', name: 'Grow Cubes 35×35×50mm (192 cubes/sheet)', desc: 'Sheet: 555×415×50mm. Biodegradable germination medium for fast, healthy seedling growth, ideal for hydroponics and soil transplanting.', imgs: [growcubes2, growcubes3] },
@@ -134,6 +139,7 @@ const categories = [
   },
   {
     label: 'Trays & Seedling',
+    id: "trays-seedling",
     products: [
       { code: 'UR018', name: 'Oasis Microgreen Mat', desc: 'Sheet: 32.5×30.5×1.3cm. Ideal for hydroponic indoor growing, providing perfect air-water ratio for fast, healthy sprouts.', imgs: [mgmat1, mgmat2, mgmat3] },
       { code: 'UR019', name: 'Microgreen Tray with Holes', desc: '600×300×30mm. Durable, stackable tray with 1.5mm holes, perfect for hydroponics, wheatgrass, and indoor gardening.', imgs: [traywoholes1, traywoholes2, traywoholes3] },
@@ -147,6 +153,7 @@ const categories = [
   },
   {
     label: 'NFT Channels & Fittings',
+    id: "nft-channels-fittings",
     products: [
       { code: 'UR023', name: 'NFT Twin-Walled Channel (with Lid)', desc: 'Food-grade hydroponic channel with openable lids for efficient nutrient flow and customizable plant spacing.', imgs: [twinwalled1, twinwalled2, twinwalled3] },
       { code: 'UR024', name: 'Twin-Walled 2" End Cap', desc: 'Food-grade uPVC end cap for leak-proof closure of NFT hydroponic channels.', imgs: [twinwalledendcap1, twinwalledendcap2, twinwalledendcap3] },
@@ -163,19 +170,30 @@ const categories = [
 function ProductCard({ code, name, desc, imgs }) {
   const [active, setActive] = useState(0);
 
-  return (
-    <div className="service-card h-100">
+  const handleWhatsAppEnquiry = (event) => {
+    event.preventDefault();
+    const shareMessage = "Hi TrueLeaves, I am interested in purchasing this product:\n\n" +
+      "📦 Product Code: " + code + "\n" +
+      "🌱 Title: " + name + "\n" +
+      "📋 Description: " + desc;
 
-      {/* Main image */}
-      <div style={{ height: '180px', overflow: 'hidden', background: '#f4faf5' }}>
+    const encodedMessage = encodeURIComponent(shareMessage);
+    window.open(`https://wa.me/${businessNumber}?text=${encodedMessage}`, "_blank");
+  };
+
+  return (
+    <div className="service-card h-100 d-flex flex-column border rounded shadow-sm bg-white" style={{ overflow: 'hidden' }}>
+
+      {/* Product Image Box Viewports */}
+      <div className="position-relative overflow-hidden" style={{ height: '180px', background: '#f4faf5' }}>
         <img
           src={imgs[active]}
-          alt={`${name} ${active + 1}`}
-          style={{ width: '100%', height: '100%', objectFit: 'cover', transition: 'opacity 0.3s ease' }}
+          alt={name}
+          style={{ width: '100%', height: '100%', objectFit: 'cover' }}
         />
       </div>
 
-      {/* Thumbnail strip */}
+      {/* Product Image Carousel Thumbnail strip views */}
       {imgs.length > 1 && (
         <div style={{ display: 'flex', gap: 4, padding: '6px 8px', background: '#fff', borderTop: '1px solid #eee', overflowX: 'auto' }}>
           {imgs.map((src, i) => (
@@ -194,16 +212,22 @@ function ProductCard({ code, name, desc, imgs }) {
                 transition: 'outline 0.2s',
               }}
             >
-              <img src={src} alt={`thumb ${i + 1}`} style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
+              <img src={src} alt="thumb" style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
             </button>
           ))}
         </div>
       )}
 
-      <div className="service-card-body">
-        <span className="badge rounded-pill mb-2" style={{ background: 'var(--light)', color: 'var(--primary)', fontSize: '0.72rem', fontWeight: 600 }}>{code}</span>
-        <h6 className="service-card-title" style={{ fontSize: '0.92rem' }}>{name}</h6>
-        <p className="service-card-desc" style={{ fontSize: '0.82rem' }}>{desc}</p>
+      {/* Main product metadata details card information body */}
+      <div className="service-card-body flex-grow-1 p-3 d-flex flex-column justify-content-between">
+        <div>
+          <span className="badge rounded-pill mb-2" style={{ background: 'var(--light)', color: 'var(--primary)', fontSize: '0.72rem', fontWeight: 600 }}>{code}</span>
+          <h6 className="service-card-title mb-2" style={{ fontSize: '0.92rem', fontWeight: 600, color: 'var(--dark)' }}>{name}</h6>
+          <p className="service-card-desc mb-3" style={{ fontSize: '0.82rem', color: 'var(--gray)', lineLength: 1.6 }}>{desc}</p>
+        </div>
+        <button type="button" onClick={handleWhatsAppEnquiry} className="link-button">
+          Know more
+        </button>
       </div>
     </div>
   );
@@ -219,8 +243,8 @@ function Products() {
           <p className="text-muted">Everything you need for hydroponic and organic farming — from growing media to nutrient solutions.</p>
         </div>
 
-        {categories.map(({ label, products }) => (
-          <div className="mb-5" key={label}>
+        {categories.map(({ id, label, products }) => (
+          <div id={id} className="mb-5" key={label}>
             <h5 className="mb-4 pb-2 border-bottom" style={{ color: 'var(--primary)', fontFamily: "'Poppins', sans-serif" }}>
               <i className="bi bi-grid-3x3-gap-fill me-2"></i>{label}
             </h5>

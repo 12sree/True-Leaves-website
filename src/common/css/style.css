@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Poppins:wght@300;400;500;600&display=swap');
 @import './enquiry_form.css';
+
 /********** Root Variables **********/
 :root {
   --primary: #2d7a3a;
@@ -96,69 +97,152 @@ a {
   padding-bottom: 4px !important;
 }
 
+/* Root Header Link Navigation items */
 .sticky-navbar .navbar-nav .nav-link {
   padding: 28px 16px;
   font-size: 14px;
   font-weight: 600;
-  color: rgba(255, 255, 255, 0.9);
+  color: rgba(255, 255, 255, 0.9) !important;
   text-transform: uppercase;
   letter-spacing: 0.5px;
   position: relative;
   transition: var(--transition);
+  display: inline-flex;
+  align-items: center;
 }
 
 .sticky-navbar.scrolled .navbar-nav .nav-link {
   padding: 18px 16px;
 }
 
-/* Dropdown container */
-.navbar-nav .dropdown {
-  /* position: relative; */
+/* Underline decoration animations */
+.sticky-navbar .navbar-nav .nav-link::after {
+  content: '';
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 0;
+  height: 2px;
+  background: var(--secondary);
+  transition: var(--transition);
 }
 
-/* Dropdown toggle link */
-.navbar-nav .dropdown-toggle {
-  display: inline-flex;
-  align-items: center;
-  /* keeps text + caret aligned */
+.sticky-navbar .navbar-nav .nav-link:hover::after,
+.sticky-navbar .navbar-nav .nav-link.active::after {
+  width: 60%;
 }
 
-/* Caret arrow next to Service */
-.navbar-nav .dropdown-toggle::after {
-  content: "▼";
-  /* down arrow */
-  /* font-size: 0.65rem; */
-  /* margin-left: 0.4rem; */
-  color: #fff;
-  vertical-align: middle;
+.sticky-navbar .navbar-nav .nav-link:hover,
+.sticky-navbar .navbar-nav .nav-link.active {
+  color: #ffffff !important;
+}
+
+/* Caret Dropdown Indicator arrows styling */
+.sticky-navbar .navbar-nav .dropdown-toggle::after {
+  content: "▼" !important;
+  font-size: 0.65rem;
+  color: #ffffff;
+  margin-left: 0.4rem;
   line-height: 1;
   border: none !important;
   position: static;
-  /* inline, not absolute */
-  transform: none;
+  display: inline-block;
+  transition: transform 0.2s ease;
 }
 
-/* Dropdown menu styling */
-.navbar-nav .dropdown-menu {
-  background-color: #006400;
-  /* dark green */
-  border: none;
-  border-radius: 0;
+/* Rotation anchor when active */
+.sticky-navbar .navbar-nav .dropdown.show .dropdown-toggle::after {
+  transform: rotate(180deg);
+}
+
+/* Dropdown Flyout Card Containers */
+.sticky-navbar .dropdown-menu {
+  background-color: #006400 !important;
+  /* Forces solid dark forest green theme block */
+  border: none !important;
+  border-radius: var(--radius);
+  box-shadow: var(--shadow-hover);
+  padding: 10px 0;
   margin-top: 0;
-  min-width: 180px;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  min-width: 240px;
 }
 
-/* Show dropdown on hover (desktop only) */
+/* Dropdown Sub-menu Anchor Row links layout definitions */
+.sticky-navbar .dropdown-item {
+  padding: 10px 20px !important;
+  font-size: 14px;
+  font-weight: 500;
+  color: #ffffff !important;
+  /* Guarantees clean reading clarity */
+  text-transform: uppercase;
+  background: transparent !important;
+  transition: var(--transition);
+  display: block;
+  width: 100%;
+}
+
+/* Highlighting actions on mouse overlays */
+.sticky-navbar .dropdown-item:hover {
+  background-color: #228B22 !important;
+  /* Transitions background layout row to light green */
+  color: #ffffff !important;
+  padding-left: 28px !important;
+}
+
+/* 💻 DESKTOP SMART-HOVER FEATURE: Restores automatic reveal on screens above tablet size */
 @media (min-width: 992px) {
-  .navbar-nav .dropdown:hover>.dropdown-menu {
-    display: block;
+  .sticky-navbar .navbar-nav .nav-item.dropdown:hover>.dropdown-menu {
+    display: block !important;
+    opacity: 1;
+    visibility: visible;
   }
 }
 
-/* Flip caret when open */
-.navbar-nav .dropdown.show .dropdown-toggle::after {
-  transform: rotate(180deg);
+/* Offset positioning margins for on-page sections anchors targeting */
+section {
+  scroll-margin-top: 90px;
+}
+
+/* Mobile & Tablet Adjustments layout structure fixes */
+@media (max-width: 991.98px) {
+  .sticky-navbar .navbar-nav .nav-link {
+    padding: 12px 10px;
+  }
+
+  .sticky-navbar .navbar-nav .nav-link::after {
+    display: none;
+  }
+
+  .sticky-navbar .dropdown-menu {
+    background-color: rgba(0, 70, 0, 0.4) !important;
+    box-shadow: none;
+  }
+}
+
+.link-button {
+  background: none;
+  border: none;
+  color: blue;
+  text-decoration: underline;
+  cursor: pointer;
+  padding: 0;
+  text-align: left;
+}
+
+/* Section scroll cushion so headers aren't swallowed by sticky menu */
+section {
+  scroll-margin-top: 90px;
+}
+
+@media (max-width: 991.98px) {
+  .sticky-navbar .navbar-nav .nav-link {
+    padding: 12px 10px;
+  }
+
+  .sticky-navbar .navbar-nav .nav-link::after {
+    display: none;
+  }
 }
 
 /* underline effect for nav links */
@@ -201,12 +285,15 @@ a {
 }
 
 .sticky-navbar .dropdown-menu {
+  background-color: #006400 !important;
   border: none;
   border-radius: var(--radius);
   box-shadow: var(--shadow-hover);
   padding: 10px 0;
   margin-top: 0;
+  min-width: 220px;
 }
+
 
 .sticky-navbar .dropdown-item {
   padding: 10px 20px;
@@ -248,14 +335,6 @@ a {
   /* Lighter green on hover */
   color: #fff;
 }
-
-/* Show dropdown on hover (desktop only) */
-@media (min-width: 992px) {
-  .navbar-nav .dropdown:hover>.dropdown-menu {
-    display: block;
-  }
-}
-
 
 /********** Hero Carousel **********/
 .hero-carousel {
@@ -1771,14 +1850,14 @@ a {
   color: #1b663e;
   border-radius: 50%;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
-  
+
   /* Flexbox absolute centering */
   display: flex;
   align-items: center;
   justify-content: center;
   cursor: pointer;
   transition: background-color 0.2s ease, color 0.2s ease;
-  top: calc(50% - 22px) !important; 
+  top: calc(50% - 22px) !important;
 }
 
 /* Hover effects */
@@ -1796,12 +1875,17 @@ a {
   display: block;
 
   /* 💡 THICKNESS TRICK: Adds a crisp visual outline matching the icon color */
-  -webkit-text-stroke: 1px currentColor; 
+  -webkit-text-stroke: 1px currentColor;
 }
 
 /* Side placement boundaries inside container */
-.custom-swiper-prev { left: 16px; }
-.custom-swiper-next { right: 16px; }
+.custom-swiper-prev {
+  left: 16px;
+}
+
+.custom-swiper-next {
+  right: 16px;
+}
 
 /* Disabled states handling if loop is changed later */
 .swiper-button-disabled {
@@ -1816,27 +1900,31 @@ a {
 }
 
 .swiper-pagination-bullets.swiper-pagination-horizontal {
-  bottom: 10px !important; /* 👈 Lowers the dots beneath the images */
+  bottom: 10px !important;
+  /* 👈 Lowers the dots beneath the images */
   left: 50% !important;
   transform: translateX(-50%) !important;
   width: auto !important;
   display: flex !important;
   align-items: center;
   justify-content: center;
-  gap: 8px; /* Balanced spacing between dots */
+  gap: 8px;
+  /* Balanced spacing between dots */
 }
 
 .swiper-pagination-bullet {
   width: 8px !important;
   height: 8px !important;
-  background-color: #cccccc !important; /* Soft grey for unselected dots */
+  background-color: #cccccc !important;
+  /* Soft grey for unselected dots */
   opacity: 1 !important;
-  margin: 0 !important; /* Handled by flex gap above */
+  margin: 0 !important;
+  /* Handled by flex gap above */
   transition: all 0.3s ease;
 }
 
 .swiper-pagination-bullet-active {
-  background-color: #1b663e !important; /* Theme green */
-  width: 24px !important; /* 💡 Optional: Makes the active dot elongated and modern */
+  background-color: #1b663e !important;
+  width: 24px !important;
   border-radius: 4px !important;
 }
